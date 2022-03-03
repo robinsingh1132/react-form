@@ -6,11 +6,13 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 const FormSignup = ({ submitForm }) => {
     const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
     return (
         <>
+        <Container>
             <Form>
                 <Row className="mb-3">
                     <h1>Form validations</h1>
@@ -86,6 +88,8 @@ const FormSignup = ({ submitForm }) => {
                     <Button onClick={handleSubmit} variant="primary" type='submit'>Sign up</Button>
                 </Row>
             </Form>
+        </Container>
+
         </>
     )
 }
