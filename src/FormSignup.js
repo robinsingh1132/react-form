@@ -15,7 +15,7 @@ const FormSignup = ({ submitForm }) => {
         <Container>
             <Form>
                 <Row className="mb-3">
-                    <h1>Form validations</h1>
+                    <h1>Sign up Form</h1>
                     <Form.Group as={Col} md="4" className="mb-3 form-input">
                         <Form.Label htmlFor='username' className='form-label'>Username</Form.Label>
                         <Form.Control id='username' type='text' name='username' className='form-input' placeholder='Enter Name' value={values.username} onChange={handleChange}></Form.Control>

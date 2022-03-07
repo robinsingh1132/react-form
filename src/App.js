@@ -9,52 +9,45 @@ import Home from './component/home';
 import Login from './component/login';
 import Profile from './component/profile';
 // import PrivateRoute from './PrivateRoute';
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 function App() {
   return (
     <>
-     <Router>
-          <div className="app">
-              <ul className="app-header">
-                <li>
-                  <Link to="/dashboard">Home</Link>
-                </li>
-                <li>
-                  <Link to="/profile">Profile</Link>
-                </li>
-                <li>
-                  <Link to="/privacy">Privacy</Link>
-                </li>
-                <li>
-                  <Link to="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact Us</Link>
-                </li>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <Link to="/signup">Sign Up</Link>
-                </li>
-              </ul>
-              <Routes>      
-
-                 <Route exact path='/dashboard' element={
-                    <PrivateRoute redirectTo='/login'><Home/> </PrivateRoute>}>
-                 </Route>
-                 <Route exact path='/profile' element={
-                    <PrivateRoute redirectTo='/login'><Profile/> </PrivateRoute>}>
-                 </Route>
-                 <Route exact path='/privacy' element={<Privacy />}></Route>
-                 <Route exact path='/about' element={<About />}></Route>
-                 <Route exact path='/contact' element={<Contact />}></Route>
-                 <Route exact path='/login' element={<Login />}></Route>
-                 <Route exact path='/signup' element={<Form />}></Route>
-
-              </Routes>
-          </div>
-        </Router>
+      <Router>
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Navbar.Brand as={Link} to="/dashboard">React App</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+                <Nav.Link as={Link} to="/privacy">Privacy</Nav.Link>
+                <Nav.Link as={Link} to="/about">About us</Nav.Link>
+                <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <Container>
+          <Routes>
+            <Route exact path='/dashboard' element={
+              <PrivateRoute redirectTo='/login'><Home /> </PrivateRoute>}>
+            </Route>
+            <Route exact path='/profile' element={
+              <PrivateRoute redirectTo='/login'><Profile /> </PrivateRoute>}>
+            </Route>
+            <Route exact path='/privacy' element={<Privacy />}></Route>
+            <Route exact path='/about' element={<About />}></Route>
+            <Route exact path='/contact' element={<Contact />}></Route>
+            <Route exact path='/login' element={<Login />}></Route>
+            <Route exact path='/signup' element={<Form />}></Route>
+          </Routes>
+        </Container>
+      </Router>
     </>
   );
 }
