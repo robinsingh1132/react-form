@@ -9,7 +9,7 @@ import Home from './component/home';
 import Login from './component/login';
 import Profile from './component/profile';
 // import PrivateRoute from './PrivateRoute';
-import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
 function App() {
   return (
@@ -35,16 +35,16 @@ function App() {
         <Container>
           <Routes>
             <Route exact path='/dashboard' element={
-              <PrivateRoute redirectTo='/login'><Home /> </PrivateRoute>}>
+              <PrivateRoute redirectTo='/login'><Home/> </PrivateRoute>}>
             </Route>
             <Route exact path='/profile' element={
-              <PrivateRoute redirectTo='/login'><Profile /> </PrivateRoute>}>
+              <PrivateRoute redirectTo='/login'><Profile/> </PrivateRoute>}>
             </Route>
-            <Route exact path='/privacy' element={<Privacy />}></Route>
-            <Route exact path='/about' element={<About />}></Route>
-            <Route exact path='/contact' element={<Contact />}></Route>
-            <Route exact path='/login' element={<Login />}></Route>
-            <Route exact path='/signup' element={<Form />}></Route>
+            <Route exact path='/privacy' element={<Privacy/>}></Route>
+            <Route exact path='/about' element={<About/>}></Route>
+            <Route exact path='/contact' element={<Contact/>}></Route>
+            <Route exact path='/login' element={<Login/>}></Route>
+            <Route exact path='/signup' element={<Form/>}></Route>
           </Routes>
         </Container>
       </Router>
