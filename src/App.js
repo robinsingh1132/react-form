@@ -10,6 +10,7 @@ import Login from './component/login';
 import Profile from './component/profile';
 // import PrivateRoute from './PrivateRoute';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import Follower from './component/follower';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Nav.Link as={Link} to="/privacy">Privacy</Nav.Link>
                 <Nav.Link as={Link} to="/about">About us</Nav.Link>
                 <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
+                <Nav.Link as={Link} to="/follower">Followers</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -45,6 +47,7 @@ function App() {
             <Route exact path='/contact' element={<Contact/>}></Route>
             <Route exact path='/login' element={<Login/>}></Route>
             <Route exact path='/signup' element={<Form/>}></Route>
+            <Route exact path='/follower' element={<Follower/>}></Route>
           </Routes>
         </Container>
       </Router>
