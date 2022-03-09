@@ -29,7 +29,7 @@ function App() {
                 <Nav.Link as={Link} to="/privacy">Privacy</Nav.Link>
                 <Nav.Link as={Link} to="/about">About us</Nav.Link>
                 <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
-                <Nav.Link as={Link} to="/follower">Followers</Nav.Link>
+                <Nav.Link as={Link} to="/followers">Followers</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -47,7 +47,7 @@ function App() {
             <Route exact path='/contact' element={<Contact/>}></Route>
             <Route exact path='/login' element={<Login/>}></Route>
             <Route exact path='/signup' element={<Form/>}></Route>
-            <Route exact path='/follower' element={<Follower/>}></Route>
+            <Route exact path='/followers' element={<Follower/>}></Route>
           </Routes>
         </Container>
       </Router>
