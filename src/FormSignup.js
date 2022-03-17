@@ -15,32 +15,32 @@ const FormSignup = ({ submitForm }) => {
         <Container>
             <Form>
                 <Row className="mb-3">
-                    <h1>Sign up Form</h1>
-                    <Form.Group as={Col} md="4" className="mb-3 form-input">
+                    {/* <h1>Sign up Form</h1> */}
+                    <Form.Group as={Col} md="12" className="form-input">
                         <Form.Label htmlFor='username' className='form-label'>Username</Form.Label>
                         <Form.Control id='username' type='text' name='username' className='form-input' placeholder='Enter Name' value={values.username} onChange={handleChange}></Form.Control>
                         {errors.username && <p>{errors.username}</p>}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className="mb-3 form-input">
+                    <Form.Group as={Col} md="12" className="mb-3 form-input">
                         <Form.Label htmlFor='email' className='form-label'>Email</Form.Label>
                         <Form.Control id='email' type='email' name='email' className='form-input' placeholder='Enter Email' value={values.email} onChange={handleChange}></Form.Control>
                         {errors.email && <p>{errors.email}</p>}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className='form-input mb-3'>
+                    <Form.Group as={Col} md="12" className='form-input mb-3'>
                         <Form.Label htmlFor='password' className='form-label'>Password</Form.Label>
                         <Form.Control id='password' type='password' name='password' className='form-input' placeholder='Enter Password' value={values.password} onChange={handleChange}></Form.Control>
                         {errors.password && <p>{errors.password}</p>}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className='form-input mb-3'>
+                    <Form.Group as={Col} md="12" className='form-input mb-3'>
                         <Form.Label htmlFor='confirm_password' className='form-label'>Confirm Password</Form.Label>
                         <Form.Control id='confirm_password' type='password' name='confirm_password' className='form-input' placeholder='Enter Confirm Password' value={values.confirm_pasword} onChange={handleChange}></Form.Control>
                         {errors.confirm_password && <p>{errors.confirm_password}</p>}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className='form-input mb-3'>
+                    <Form.Group as={Col} md="12" className='form-input'>
                         <Form.Label htmlFor="cars">Choose a car:</Form.Label>
 
                         <Form.Select name="cars" id="cars" value={values.cars} onChange={handleChange}>
@@ -53,7 +53,7 @@ const FormSignup = ({ submitForm }) => {
                         {errors.cars && <p className='cars'>{errors.cars}</p>}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className='form-input mt-4'>
+                    <Form.Group as={Col} md="12" className='form-input'>
                     {['radio'].map((type) => (
                         <div key={`inline-${type}`} className="mb-3">
                         <Form.Check
@@ -79,7 +79,7 @@ const FormSignup = ({ submitForm }) => {
                     ))}
                     </Form.Group>
 
-                    <Form.Group as={Col} md="4" className='form-input mb-3'>
+                    <Form.Group as={Col} md="12" className='form-input mb-3'>
                         <Form.Label htmlFor='phone_number' className='form-label'>Phone Number</Form.Label>
                         <Form.Control id='phone_number' type='number' name='phone_number' className='form-input' placeholder='Enter Phone Number' value={values.phone_number} onChange={handleChange}></Form.Control>
                         {errors.phone_number && <p>{errors.phone_number}</p>}

@@ -11,6 +11,8 @@ import Profile from './component/profile';
 // import PrivateRoute from './PrivateRoute';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import Follower from './component/follower';
+import Register from './component/Register';
+import Forgot from './component/Forgot';
 
 function App() {
   return (
@@ -25,7 +27,8 @@ function App() {
                 <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
                 <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
                 <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+                <Nav.Link as={Link} to="/register">Sign Up</Nav.Link>
+                {/* <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link> */}
                 <Nav.Link as={Link} to="/privacy">Privacy</Nav.Link>
                 <Nav.Link as={Link} to="/about">About us</Nav.Link>
                 <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
@@ -46,8 +49,11 @@ function App() {
             <Route exact path='/about' element={<About/>}></Route>
             <Route exact path='/contact' element={<Contact/>}></Route>
             <Route exact path='/login' element={<Login/>}></Route>
-            <Route exact path='/signup' element={<Form/>}></Route>
+            {/* <Route exact path='/signup' element={<Form/>}></Route> */}
+            <Route exact path='/register' element={<Register/>}></Route>
             <Route exact path='/followers' element={<Follower/>}></Route>
+            <Route exact path='/forgot' element={<Forgot/>}></Route>
+
           </Routes>
         </Container>
       </Router>
